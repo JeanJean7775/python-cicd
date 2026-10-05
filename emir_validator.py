@@ -31,7 +31,7 @@ def reconcile_trade(source, reported):
     if source["currency"] != reported["currency"]:
         discrepancies.append("Currency mismatch")
 
-    if source["notional"] == reported["notional"]:
+    if source["notional"] != reported["notional"]:
         discrepancies.append("Notional mismatch")
 
     if discrepancies:
