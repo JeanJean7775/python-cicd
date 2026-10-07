@@ -37,3 +37,12 @@ jobs:
     steps:
       - name: Deploy to UAT
         run: echo "Deploying EMIR validator to UAT environment"
+
+  deploy-production:
+    needs: deploy-uat
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Deploy to Production
+        run: echo "Deploying EMIR validator to Production"
