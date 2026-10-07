@@ -30,3 +30,10 @@ jobs:
       - name: Run tests
         run: |
           pytest -v
+  deploy-uat:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to UAT
+        run: echo "Deploying EMIR validator to UAT environment"
