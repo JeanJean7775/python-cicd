@@ -46,3 +46,4 @@ jobs:
     steps:
       - name: Deploy to Production
         run: echo "Deploying EMIR validator to Production"
+# CI/CD training: verify production approval gate
